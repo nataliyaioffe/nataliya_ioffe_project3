@@ -1,17 +1,19 @@
 
 main {
     transition-property: background-image;
-    transition-duration: 10s;
-    transition-delay: 10s;
-    transition-timing-function: ease-in-out;
+    // transition-duration: 10s;
+    // transition-delay: 10s;
+    // transition-timing-function: ease-in-out;
 }
 
 .hero-content {
     // border: 1px solid black;
+    p {
+        margin: 20px 0;
+    }
 }
 h1 {
     font-family: 'East Sea Dokdo', cursive;
-    // font-family: 'Fondamento', cursive;
     font-size: 12rem; 
     animation-duration: 4s;
     // animation-delay:1s;
@@ -45,17 +47,14 @@ a {
 
 @keyframes pulse {
   0% {
-    -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
 
   50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
     transform: scale3d(1.05, 1.05, 1.05);
   }
 
   100% {
-    -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
 }
@@ -63,6 +62,7 @@ a {
 
 .result {
     text-align: center;
+    height: 100px;
 }
 
 button {
@@ -74,15 +74,16 @@ button {
 
 // BACKGROUNDS
 .bg0 {
+    background-image: linear-gradient(to top, rgba(255, 255,255,0.3), rgba(255, 255,255,0.3)),url("../images/sarah-dorweiler-357715-unsplash.jpg");
+    background-size: cover;
+}
+
+.bg1 {
     background-image: linear-gradient(to top, rgba(255, 255,255,0.1), rgba(255, 255,255,0.7)),
     url("../images/tristan-taussac-356484-unsplash.jpg");
     background-size: cover;
     background-position: center;
-}
-
-.bg1 {
-    background-image: linear-gradient(to top, rgba(255, 255,255,0.3), rgba(255, 255,255,0.3)),url("../images/sarah-dorweiler-357715-unsplash.jpg");
-    background-size: cover;
+    
 }
 
 .bg2 {
@@ -108,7 +109,7 @@ button {
     background-position: top;
 }
 .bg6 {
-    background-image: linear-gradient(to top, rgba(255, 255,255,0.5), rgba(255, 255,255,0.5)),url("../images/jeremy-bishop-338661-unsplash.jpg");
+    background-image: linear-gradient(to top, rgba(255, 255,255,0.7), rgba(255, 255,255,0.7)),url("../images/jeremy-bishop-338661-unsplash.jpg");
     background-size: cover;
     background-position: top;
 }

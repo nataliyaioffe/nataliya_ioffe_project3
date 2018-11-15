@@ -29,26 +29,46 @@ const app = {
 // write function to return random quote from array
 
 const getRandomQuote = function () {
-    const randomQuote = app.quotes[Math.floor(Math.random() * app.quotes.length)];
-    $(".result").html(randomQuote);
+    if (quoteLocked === false) {
+        const randomQuote = app.quotes[Math.floor(Math.random() * app.quotes.length)];
+        $(".result").html(randomQuote);
+    }
 }
 
-// write function to return random class which will include image URL from array
+
+
+
+ // create new variable which is saves current (prev) bg
+
+//  create a variable which will serve as a background locked flag e.g let lockedBkg = false;
+//  let prevBackground = null;
+
+let quoteLocked = false;
+let bgLocked = false;
+
+// write function to return random class which will include image URL from array, IF background is not locked
 const getRandomBackground = function () {
-    const randomBgClass = app.backgrounds[Math.floor(Math.random() * app.backgrounds.length)];
-    // changeBackgroundofDiv(randomBkgroundClass);
-    // select the element that I want to have a random background, and give it a class of the random background returned to me by getRandomBackground()
-    $("main").removeClass();
-
-    $("main").addClass(randomBgClass);
+    if (bgLocked === false) {
+        // select the element that I want to have a random background, and give it a class of the random background returned to me by getRandomBackground()
+        const randomBgClass = app.backgrounds[Math.floor(Math.random() * app.backgrounds.length)];
+        $("main").removeClass();
+        $("main").addClass(randomBgClass);
+    }
 }
-
 
 $(function () {
-    console.log("ready");
-
     $("button").on("click", function () {
         getRandomQuote();
         getRandomBackground();
     })
+    // on the click of background lock icon. Set the flag to true.
+
+    $(".bg-lock-link").on("click", function() {
+        bgLocked = !bgLocked;
+        console.log("TOGGLED!")
+        console.log(bgLocked);
+        return bgLocked;
+
+    });
+
 });

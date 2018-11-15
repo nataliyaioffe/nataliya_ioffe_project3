@@ -169,16 +169,10 @@ html {
 main {
   -webkit-transition-property: background-image;
   -o-transition-property: background-image;
-  transition-property: background-image;
-  -webkit-transition-duration: 10s;
-  -o-transition-duration: 10s;
-  transition-duration: 10s;
-  -webkit-transition-delay: 10s;
-  -o-transition-delay: 10s;
-  transition-delay: 10s;
-  -webkit-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out; }
+  transition-property: background-image; }
+
+.hero-content p {
+  margin: 20px 0; }
 
 h1 {
   font-family: 'East Sea Dokdo', cursive;
@@ -239,7 +233,8 @@ a {
     transform: scale3d(1, 1, 1); } }
 
 .result {
-  text-align: center; }
+  text-align: center;
+  height: 100px; }
 
 button {
   padding: 15px;
@@ -248,19 +243,19 @@ button {
   background-color: transparent; }
 
 .bg0 {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3))), url("../images/sarah-dorweiler-357715-unsplash.jpg");
+  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/sarah-dorweiler-357715-unsplash.jpg");
+  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/sarah-dorweiler-357715-unsplash.jpg");
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/sarah-dorweiler-357715-unsplash.jpg");
+  background-size: cover; }
+
+.bg1 {
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.7))), url("../images/tristan-taussac-356484-unsplash.jpg");
   background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.7)), url("../images/tristan-taussac-356484-unsplash.jpg");
   background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.7)), url("../images/tristan-taussac-356484-unsplash.jpg");
   background-image: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.7)), url("../images/tristan-taussac-356484-unsplash.jpg");
   background-size: cover;
   background-position: center; }
-
-.bg1 {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3))), url("../images/sarah-dorweiler-357715-unsplash.jpg");
-  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/sarah-dorweiler-357715-unsplash.jpg");
-  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/sarah-dorweiler-357715-unsplash.jpg");
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/sarah-dorweiler-357715-unsplash.jpg");
-  background-size: cover; }
 
 .bg2 {
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3))), url("../images/masaaki-komori-603921-unsplash.jpg");
@@ -295,10 +290,10 @@ button {
   background-position: top; }
 
 .bg6 {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url("../images/jeremy-bishop-338661-unsplash.jpg");
-  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/jeremy-bishop-338661-unsplash.jpg");
-  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/jeremy-bishop-338661-unsplash.jpg");
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/jeremy-bishop-338661-unsplash.jpg");
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url("../images/jeremy-bishop-338661-unsplash.jpg");
+  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/jeremy-bishop-338661-unsplash.jpg");
+  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/jeremy-bishop-338661-unsplash.jpg");
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/jeremy-bishop-338661-unsplash.jpg");
   background-size: cover;
   background-position: top; }
 
