@@ -1,7 +1,7 @@
 const app = {
     quotes: [
-        "<p>Insight emerges out of silence.</p>", 
-        "<p>If you let go a little you will have a little happiness. If you let go completely you will be free.</p>", 
+        "<p>Insight emerges out of silence.</p>",
+        "<p>If you let go a little you will have a little happiness. If you let go completely you will be free.</p>",
         "<p>\"The wild geese do not intend to cast their reflections.The water has no mind to receive their images.\"</p>",
         "<p>\“It does not matter how slowly you go as long as you do not stop.”\ – Confucius</p>",
         "<p>\"The true miracle is not walking on water or walking in air, but simply walking on this earth.\" ― Thích Nhất Hạnh</p>",
@@ -9,7 +9,7 @@ const app = {
         "<p>\"You are exactly where you need to be\"</p>",
         "<p>\"Knowledge is learning something everyday. Wisdom is letting go of something everyday.\"</p>",
         "<p>\"One must be deeply aware of the impermanence of the world.\"– Dogen</p>",
-        "<p>\"Have good trust in yourself … not in the One that you think you should be, but in the One that you are.\"– Maezumi Roshi</p>",
+        "<p>\"Have good trust in yourself … not in the One that you think you should be, but in the One that you are.\"–Maezumi Roshi</p > ",
     ],
     backgrounds: [
         {
@@ -59,32 +59,6 @@ const app = {
     ]
 }
 
-let defaultChangingGradient = "linear-gradient(to top, red, rgba(255, 255, 255, 0.1))";
-
-let changingBackground = "../images/sarah-dorweiler-357715-unsplash.jpg";
-
-// const randomBgSrc = app.backgrounds[Math.floor(Math.random() * app.backgrounds.length)].bgSource;
-
-
-// SAFFI EXPLANATION
-
-function changeImageAndBg(imageSource, linearGradient) {
-    $("main").css("background-image", `${linearGradient}, url(${imageSource})`);
-}
-
-// functionOfSomeKind(backgroundvariable, myGradient);
-
-
-// // Get random bg source, then:
-// backgroundvariable = randomBgClass
-// functionOfSomeKind(backgroundvariable, myGradient);
-
-// // get slider gradient thingy, then:
-// myGradient = newGradient 
-// functionOfSomeKind(backgroundvariable, myGradient);
-
-
-
 // create "locked" quote flag
 // retreive random quote item from array
 // insert random quote item into "results" div
@@ -95,16 +69,24 @@ const getRandomQuote = function () {
         $(".result").html(randomQuote);
     }
 }
+
+
+let defaultAndChangingGradient = "linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3))";
+// let changingBackground = "../images/sarah-dorweiler-357715-unsplash.jpg";
+
+function changeColorAndBg(linearGradient, imageSource) {
+    $("main").css("background-image", `${linearGradient}, url(${imageSource})`);
+}
+
 // create "locked" background flag
 // retreive random bg class item from array
-// if bg is NOT LOCKED, remove any classes from "main," and insert random bg class instead. 
+// if bg is NOT LOCKED, remove any classes from "main," and insert random bg class instead.
 let bgLocked = false;
 const getRandomBackground = function () {
     if (bgLocked === false) {
         // select the element that I want to have a random background, and give it a class of the random background returned to me by getRandomBackground()
         const randomBgSrc = app.backgrounds[Math.floor(Math.random() * app.backgrounds.length)].bgSource;
-        // $("main").css("background-image", `${defaultChangingGradient}, url(${randomBgSrc})`);
-        changeImageAndBg(randomBgSrc, defaultChangingGradient);
+        changeColorAndBg(defaultAndChangingGradient, randomBgSrc);
     }
 }
 
@@ -113,18 +95,29 @@ $(function () {
     $("button").on("click", function () {
         getRandomQuote();
         getRandomBackground();
-    })
+        // call changeImageAndBg with new default changing gradient
+        // GET input from color thingy (val)
+        // figure out what bg we are on (WHEN LOCKEEd)
+        // IN button.on Click ,call changeImageAndBg with new default Changing Graident
+    });
     // on the click of background lock icon. Set the "bgLocked" variable/flag to true.
-    $(".bg-lock-link").on("click", function() {
+    $(".bg-lock-link").on("click", function () {
         bgLocked = !bgLocked;
         console.log(bgLocked);
         return bgLocked;
     });
     // on the click of quote lock icon. Set the "quoteLocked" variable/flag to true.
-    $(".quote-lock-link").on("click", function() {
+    $(".quote-lock-link").on("click", function () {
         quoteLocked = !quoteLocked;
         console.log("quoteLocked")
         return bgLocked;
-    })
+    });
+    
+    // GET input from color thingy (val)
 
+    $("form").on("submit", function(event) {
+        event.preventDefault();
+        const userColor = $("input[type='color']").val();
+        console.log('heh', userColor);
+    });    
 });
