@@ -12,42 +12,101 @@ const app = {
         "<p>\"Have good trust in yourself … not in the One that you think you should be, but in the One that you are.\"– Maezumi Roshi</p>",
     ],
     backgrounds: [
-        "bg0",
-        "bg1",
-        "bg2",
-        "bg3",
-        "bg4",
-        "bg5",
-        "bg6",
-        "bg7",
-        "bg8",
-        "bg9"
+        {
+            bgSource: "../images/sarah-dorweiler-357715-unsplash.jpg",
+            bgSize: "cover"
+        },
+        {
+            bgSource: "../images/igor-son-320878-unsplash.jpg",
+            bgSize: "cover"
+        },
+        {
+            bgSource: "../images/tristan-taussac-356484-unsplash.jpg",
+            bgSize: "cover"
+        },
+        {
+            bgSource: "../images/masaaki-komori-603921-unsplash.jpg",
+            bgSize: "cover"
+        },
+        {
+            bgSource: "../images/quino-al-103766-unsplash.jpg",
+            bgSize: "cover"
+        },
+        {
+            bgSource: "../images/max-di-capua-1064162-unsplash.jpg",
+            bgSize: "cover"
+        },
+        {
+            bgSource: "../images/cristina-gottardi-564469-unsplash.jpg",
+            bgSize: "cover"
+        },
+        {
+            bgSource: "../images/jeremy-bishop-338661-unsplash.jpg",
+            bgSize: "cover"
+        },
+        {
+            bgSource: "../images/igor-son-320878-unsplash.jpg",
+            bgSize: "cover"
+        },
+        {
+            bgSource: "../images/elin-tabitha-1092029-unsplash.jpg",
+            bgSize: "cover"
+        },
+        {
+            bgSource: "../images/darran-shen-589140-unsplash.jpg",
+            bgSize: "cover"
+        }
     ]
 }
 
-let quoteLocked = false;
-let bgLocked = false;
+let defaultChangingGradient = "linear-gradient(to top, red, rgba(255, 255, 255, 0.1))";
 
+let changingBackground = "../images/sarah-dorweiler-357715-unsplash.jpg";
+
+// const randomBgSrc = app.backgrounds[Math.floor(Math.random() * app.backgrounds.length)].bgSource;
+
+
+// SAFFI EXPLANATION
+
+function changeImageAndBg(imageSource, linearGradient) {
+    $("main").css("background-image", `${linearGradient}, url(${imageSource})`);
+}
+
+// functionOfSomeKind(backgroundvariable, myGradient);
+
+
+// // Get random bg source, then:
+// backgroundvariable = randomBgClass
+// functionOfSomeKind(backgroundvariable, myGradient);
+
+// // get slider gradient thingy, then:
+// myGradient = newGradient 
+// functionOfSomeKind(backgroundvariable, myGradient);
+
+
+
+// create "locked" quote flag
 // retreive random quote item from array
 // insert random quote item into "results" div
+let quoteLocked = false;
 const getRandomQuote = function () {
     if (quoteLocked === false) {
         const randomQuote = app.quotes[Math.floor(Math.random() * app.quotes.length)];
         $(".result").html(randomQuote);
     }
 }
-
+// create "locked" background flag
 // retreive random bg class item from array
 // if bg is NOT LOCKED, remove any classes from "main," and insert random bg class instead. 
+let bgLocked = false;
 const getRandomBackground = function () {
     if (bgLocked === false) {
         // select the element that I want to have a random background, and give it a class of the random background returned to me by getRandomBackground()
-        const randomBgClass = app.backgrounds[Math.floor(Math.random() * app.backgrounds.length)];
-        $("main").removeClass();
-        $("main").addClass(randomBgClass);
+        const randomBgSrc = app.backgrounds[Math.floor(Math.random() * app.backgrounds.length)].bgSource;
+        // $("main").css("background-image", `${defaultChangingGradient}, url(${randomBgSrc})`);
+        changeImageAndBg(randomBgSrc, defaultChangingGradient);
     }
 }
-
 
 $(function () {
     // on click of button, execute random quote / bg class functions.
