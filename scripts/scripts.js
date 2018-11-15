@@ -23,11 +23,13 @@ const app = {
         "bg8",
         "bg9"
     ]
-    
 }
 
-// write function to return random quote from array
+let quoteLocked = false;
+let bgLocked = false;
 
+// retreive random quote item from array
+// insert random quote item into "results" div
 const getRandomQuote = function () {
     if (quoteLocked === false) {
         const randomQuote = app.quotes[Math.floor(Math.random() * app.quotes.length)];
@@ -35,18 +37,8 @@ const getRandomQuote = function () {
     }
 }
 
-
-
-
- // create new variable which is saves current (prev) bg
-
-//  create a variable which will serve as a background locked flag e.g let lockedBkg = false;
-//  let prevBackground = null;
-
-let quoteLocked = false;
-let bgLocked = false;
-
-// write function to return random class which will include image URL from array, IF background is not locked
+// retreive random bg class item from array
+// if bg is NOT LOCKED, remove any classes from "main," and insert random bg class instead. 
 const getRandomBackground = function () {
     if (bgLocked === false) {
         // select the element that I want to have a random background, and give it a class of the random background returned to me by getRandomBackground()
@@ -56,19 +48,24 @@ const getRandomBackground = function () {
     }
 }
 
+
 $(function () {
+    // on click of button, execute random quote / bg class functions.
     $("button").on("click", function () {
         getRandomQuote();
         getRandomBackground();
     })
-    // on the click of background lock icon. Set the flag to true.
-
+    // on the click of background lock icon. Set the "bgLocked" variable/flag to true.
     $(".bg-lock-link").on("click", function() {
         bgLocked = !bgLocked;
-        console.log("TOGGLED!")
         console.log(bgLocked);
         return bgLocked;
-
     });
+    // on the click of quote lock icon. Set the "quoteLocked" variable/flag to true.
+    $(".quote-lock-link").on("click", function() {
+        quoteLocked = !quoteLocked;
+        console.log("quoteLocked")
+        return bgLocked;
+    })
 
 });
