@@ -167,11 +167,11 @@ html {
   text-align: center; }
 
 main {
-  -webkit-transition-property: background-image;
-  -o-transition-property: background-image;
-  transition-property: background-image; }
+  background-image: url("../images/sarah-dorweiler-357715-unsplash.jpg");
+  background-size: cover;
+  background-position: top; }
 
-.hero-content p {
+p {
   margin: 20px 0; }
 
 h1 {
@@ -184,8 +184,12 @@ h1 {
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out; }
 
-.box {
-  width: 50%; }
+p {
+  font-family: 'Courgette', cursive;
+  font-size: 3rem; }
+
+.active {
+  color: rgba(0, 0, 0, 0.5); }
 
 .lock {
   display: -webkit-box;
@@ -215,8 +219,8 @@ a {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1); }
   50% {
-    -webkit-transform: scale3d(1.09, 1.09, 1.09);
-    transform: scale3d(1.09, 1.09, 1.09); }
+    -webkit-transform: scale3d(1.06, 1.06, 1.06);
+    transform: scale3d(1.06, 1.06, 1.06); }
   100% {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1); } }
@@ -226,8 +230,8 @@ a {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1); }
   50% {
-    -webkit-transform: scale3d(1.09, 1.09, 1.09);
-    transform: scale3d(1.09, 1.09, 1.09); }
+    -webkit-transform: scale3d(1.06, 1.06, 1.06);
+    transform: scale3d(1.06, 1.06, 1.06); }
   100% {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1); } }
@@ -241,82 +245,3 @@ button {
   border-radius: 50px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: transparent; }
-
-.bg0 {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3))), url("../images/sarah-dorweiler-357715-unsplash.jpg");
-  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/sarah-dorweiler-357715-unsplash.jpg");
-  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/sarah-dorweiler-357715-unsplash.jpg");
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/sarah-dorweiler-357715-unsplash.jpg");
-  background-size: cover; }
-
-.bg1 {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.7))), url("../images/tristan-taussac-356484-unsplash.jpg");
-  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.7)), url("../images/tristan-taussac-356484-unsplash.jpg");
-  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.7)), url("../images/tristan-taussac-356484-unsplash.jpg");
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.7)), url("../images/tristan-taussac-356484-unsplash.jpg");
-  background-size: cover;
-  background-position: center; }
-
-.bg2 {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3))), url("../images/masaaki-komori-603921-unsplash.jpg");
-  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/masaaki-komori-603921-unsplash.jpg");
-  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/masaaki-komori-603921-unsplash.jpg");
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/masaaki-komori-603921-unsplash.jpg");
-  background-size: cover;
-  background-position: center; }
-
-.bg3 {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.4)), to(rgba(255, 255, 255, 0.4))), url("../images/quino-al-103766-unsplash.jpg");
-  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../images/quino-al-103766-unsplash.jpg");
-  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../images/quino-al-103766-unsplash.jpg");
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../images/quino-al-103766-unsplash.jpg");
-  background-size: cover;
-  background-position: bottom; }
-
-.bg4 {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3))), url("../images/max-di-capua-1064162-unsplash.jpg");
-  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/max-di-capua-1064162-unsplash.jpg");
-  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/max-di-capua-1064162-unsplash.jpg");
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/max-di-capua-1064162-unsplash.jpg");
-  background-size: cover;
-  background-position: bottom; }
-
-.bg5 {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3))), url("../images/cristina-gottardi-564469-unsplash.jpg");
-  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/cristina-gottardi-564469-unsplash.jpg");
-  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/cristina-gottardi-564469-unsplash.jpg");
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/cristina-gottardi-564469-unsplash.jpg");
-  background-size: cover;
-  background-position: top; }
-
-.bg6 {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url("../images/jeremy-bishop-338661-unsplash.jpg");
-  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/jeremy-bishop-338661-unsplash.jpg");
-  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/jeremy-bishop-338661-unsplash.jpg");
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/jeremy-bishop-338661-unsplash.jpg");
-  background-size: cover;
-  background-position: top; }
-
-.bg7 {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3))), url("../images/igor-son-320878-unsplash.jpg");
-  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/igor-son-320878-unsplash.jpg");
-  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/igor-son-320878-unsplash.jpg");
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/igor-son-320878-unsplash.jpg");
-  background-size: cover;
-  background-position: center; }
-
-.bg8 {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.5))), url("../images/elin-tabitha-1092029-unsplash.jpg");
-  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5)), url("../images/elin-tabitha-1092029-unsplash.jpg");
-  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5)), url("../images/elin-tabitha-1092029-unsplash.jpg");
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5)), url("../images/elin-tabitha-1092029-unsplash.jpg");
-  background-size: cover;
-  background-position: bottom; }
-
-.bg9 {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3))), url("../images/darran-shen-589140-unsplash.jpg");
-  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/darran-shen-589140-unsplash.jpg");
-  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/darran-shen-589140-unsplash.jpg");
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/darran-shen-589140-unsplash.jpg");
-  background-size: cover;
-  background-position: top; }

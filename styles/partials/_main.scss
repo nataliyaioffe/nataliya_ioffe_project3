@@ -1,34 +1,34 @@
 
 main {
-    transition-property: background-image;
-    // transition-duration: 10s;
-    // transition-delay: 10s;
-    // transition-timing-function: ease-in-out;
+    background-image: url("../images/sarah-dorweiler-357715-unsplash.jpg");
+    background-size: cover;
+    background-position: top;
 }
 
-.hero-content {
-    // border: 1px solid black;
-    p {
-        margin: 20px 0;
-    }
+p {
+    margin: 20px 0;
 }
 h1 {
     font-family: 'East Sea Dokdo', cursive;
     font-size: 12rem; 
     animation-duration: 4s;
-    // animation-delay:1s;
     animation-iteration-count:infinite;
     animation-timing-function: ease-in-out;
 }
 
-.box {
-    width: 50%;
+p {
+    font-family: 'Courgette', cursive;
+    font-size: 3rem;
 }
+
+.active {
+    color:rgba(0, 0, 0, 0.5);
+}
+
 .lock {
     display: flex;
     flex-direction: column;
     padding-top: 40px;
-    // border: 1px solid black;
 }
 
 a {
@@ -51,7 +51,7 @@ a {
   }
 
   50% {
-    transform: scale3d(1.09, 1.09, 1.09);
+    transform: scale3d(1.06, 1.06, 1.06);
   }
 
   100% {
@@ -74,63 +74,63 @@ button {
 }
 
 // BACKGROUNDS
-.bg0 {
-    background-image: linear-gradient(to top, rgba(255, 255,255,0.3), rgba(255, 255,255,0.3)),url("../images/sarah-dorweiler-357715-unsplash.jpg");
-    background-size: cover;
-}
+// .bg0 {
+//     background-image: linear-gradient(to top, rgba(255, 255,255,0.3), rgba(255, 255,255,0.3)),url("../images/sarah-dorweiler-357715-unsplash.jpg");
+//     background-size: cover;
+// }
 
-.bg1 {
-    background-image: linear-gradient(to top, rgba(255, 255,255,0.1), rgba(255, 255,255,0.7)),
-    url("../images/tristan-taussac-356484-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
+// .bg1 {
+//     background-image: linear-gradient(to top, rgba(255, 255,255,0.1), rgba(255, 255,255,0.7)),
+//     url("../images/tristan-taussac-356484-unsplash.jpg");
+//     background-size: cover;
+//     background-position: center;
     
-}
+// }
 
-.bg2 {
-    background-image: linear-gradient(to top, rgba(255, 255,255,0.3), rgba(255, 255,255,0.3)),url("../images/masaaki-komori-603921-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
+// .bg2 {
+//     background-image: linear-gradient(to top, rgba(255, 255,255,0.3), rgba(255, 255,255,0.3)),url("../images/masaaki-komori-603921-unsplash.jpg");
+//     background-size: cover;
+//     background-position: center;
 
-}
+// }
 
-.bg3 {
-    background-image: linear-gradient(to top, rgba(255, 255,255,0.4), rgba(255, 255,255,0.4)), url("../images/quino-al-103766-unsplash.jpg");
-    background-size: cover;
-    background-position: bottom;
-}
-.bg4 {
-    background-image: linear-gradient(to top, rgba(255, 255,255,0.3), rgba(255, 255,255,0.3)),url("../images/max-di-capua-1064162-unsplash.jpg");
-    background-size: cover;
-    background-position: bottom;
-}
-.bg5 {
-    background-image: linear-gradient(to top, rgba(255, 255,255,0.3), rgba(255, 255,255,0.3)),url("../images/cristina-gottardi-564469-unsplash.jpg");
-    background-size: cover;
-    background-position: top;
-}
-.bg6 {
-    background-image: linear-gradient(to top, rgba(255, 255,255,0.7), rgba(255, 255,255,0.7)),url("../images/jeremy-bishop-338661-unsplash.jpg");
-    background-size: cover;
-    background-position: top;
-}
-.bg7 {
-    background-image: linear-gradient(to top, rgba(255, 255,255,0.3), rgba(255, 255,255,0.3)),url("../images/igor-son-320878-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-}
-.bg8 {
-    background-image: linear-gradient(to top, rgba(255, 255,255,0.2), rgba(255, 255,255,0.5)),url("../images/elin-tabitha-1092029-unsplash.jpg");
-    background-size: cover;
-    background-position: bottom;
-}
+// .bg3 {
+//     background-image: linear-gradient(to top, rgba(255, 255,255,0.4), rgba(255, 255,255,0.4)), url("../images/quino-al-103766-unsplash.jpg");
+//     background-size: cover;
+//     background-position: bottom;
+// }
+// .bg4 {
+//     background-image: linear-gradient(to top, rgba(255, 255,255,0.3), rgba(255, 255,255,0.3)),url("../images/max-di-capua-1064162-unsplash.jpg");
+//     background-size: cover;
+//     background-position: bottom;
+// }
+// .bg5 {
+//     background-image: linear-gradient(to top, rgba(255, 255,255,0.3), rgba(255, 255,255,0.3)),url("../images/cristina-gottardi-564469-unsplash.jpg");
+//     background-size: cover;
+//     background-position: top;
+// }
+// .bg6 {
+//     background-image: linear-gradient(to top, rgba(255, 255,255,0.7), rgba(255, 255,255,0.7)),url("../images/jeremy-bishop-338661-unsplash.jpg");
+//     background-size: cover;
+//     background-position: top;
+// }
+// .bg7 {
+//     background-image: linear-gradient(to top, rgba(255, 255,255,0.3), rgba(255, 255,255,0.3)),url("../images/igor-son-320878-unsplash.jpg");
+//     background-size: cover;
+//     background-position: center;
+// }
+// .bg8 {
+//     background-image: linear-gradient(to top, rgba(255, 255,255,0.2), rgba(255, 255,255,0.5)),url("../images/elin-tabitha-1092029-unsplash.jpg");
+//     background-size: cover;
+//     background-position: bottom;
+// }
 
-.bg9 {
-    background-image: linear-gradient(to top, rgba(255, 255,255,0.3), rgba(255, 255,255,0.3)),url("../images/darran-shen-589140-unsplash.jpg");
-    background-size: cover;
-    background-position: top;
+// .bg9 {
+//     background-image: linear-gradient(to top, rgba(255, 255,255,0.3), rgba(255, 255,255,0.3)),url("../images/darran-shen-589140-unsplash.jpg");
+//     background-size: cover;
+//     background-position: top;
 
-}
+// }
 
 
 
