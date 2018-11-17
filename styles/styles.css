@@ -152,7 +152,6 @@ html {
 .wrapper {
   width: 80%;
   max-width: 1280px;
-  height: 100vh;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,9 +166,14 @@ html {
   text-align: center; }
 
 main {
-  background-image: url("../images/sarah-dorweiler-357715-unsplash.jpg");
+  background: url("../images/sarah-dorweiler-357715-unsplash.jpg");
   background-size: cover;
-  background-position: top; }
+  background-position: top;
+  position: relative;
+  height: 100vh; }
+
+.wrapper {
+  padding-top: 150px; }
 
 p {
   margin: 20px 0; }
@@ -182,7 +186,10 @@ h1 {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out; }
+  animation-timing-function: ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 42%; }
 
 p {
   font-family: 'Courgette', cursive;
@@ -236,9 +243,9 @@ a {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1); } }
 
-.result {
+.quote-wrapper {
   text-align: center;
-  height: 100px; }
+  height: 50vh; }
 
 button {
   padding: 15px;

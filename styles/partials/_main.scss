@@ -1,19 +1,27 @@
-
 main {
-    background-image: url("../images/sarah-dorweiler-357715-unsplash.jpg");
+    background: url("../images/sarah-dorweiler-357715-unsplash.jpg");
     background-size: cover;
     background-position: top;
+    position: relative;
+    height: 100vh;
+}
+.wrapper {
+    padding-top: 150px;
 }
 
 p {
     margin: 20px 0;
 }
+
 h1 {
     font-family: 'East Sea Dokdo', cursive;
     font-size: 12rem; 
     animation-duration: 4s;
     animation-iteration-count:infinite;
     animation-timing-function: ease-in-out;
+    position: absolute;
+    top: 0;
+    right: 42%;
 }
 
 p {
@@ -61,9 +69,9 @@ a {
 // edited from animate.css
 
 
-.result {
+.quote-wrapper {
     text-align: center;
-    height: 100px;
+    height: 50vh;
 }
 
 button {
