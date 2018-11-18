@@ -46,18 +46,18 @@ app.data = {
         // "<p>\"When you catch yourself slipping into a pool of negativity, notice how it derives from nothing other than resistance to the current situation.\" <span>Donna Quesada</span></p>"   
     ],
     backgrounds: [
-        { bgSource: "./images/sarah-dorweiler-357715-unsplash.jpg", },
-        { bgSource: "./images/igor-son-320878-unsplash.jpg", },
-        { bgSource: "./images/tristan-taussac-356484-unsplash.jpg", },
-        { bgSource: "./images/masaaki-komori-603921-unsplash.jpg", },
-        { bgSource: "./images/quino-al-103766-unsplash.jpg", },
-        { bgSource: "./images/cristina-gottardi-564469-unsplash.jpg", },
-        { bgSource: "./images/igor-son-320878-unsplash.jpg", },
-        { bgSource: "./images/darran-shen-589140-unsplash.jpg", },
-        { bgSource: "./images/kara-eads-1080482-unsplash.jpg"}
-        // { bgSource: "./images/max-di-capua-1064162-unsplash.jpg", },
-        // { bgSource: "./images/elin-tabitha-1092029-unsplash.jpg", },
-        // { bgSource: "./images/jeremy-bishop-338661-unsplash.jpg", },
+        { bgSource: "<img src='./images/sarah-dorweiler-357715-unsplash.jpg' alt='RANDOM ALT1 '>"},
+        { bgSource: "<img src='./images/igor-son-320878-unsplash.jpg' alt='RANDOM ALT 2'>"},
+        { bgSource: "<img src='./images/tristan-taussac-356484-unsplash.jpg' alt='RANDOM ALT' 3>"},
+        { bgSource: "<img src='./images/masaaki-komori-603921-unsplash.jpg' alt='RANDOM ALT TEXT 4'>"},
+        { bgSource: "<img src='./images/quino-al-103766-unsplash.jpg' alt='RANDOM ALT TEXT 5'>"},
+        { bgSource: "<img src='./images/cristina-gottardi-564469-unsplash.jpg' alt='RANDOM ALT TEXT 6'>"},
+        { bgSource: "<img src='./images/igor-son-320878-unsplash.jpg'' alt='RANDOM ALT TEXT 7'>"},
+        { bgSource: "<img src='./images/darran-shen-589140-unsplash.jpg' alt='RANDOM ALT TEXT 8'>"},
+        { bgSource: "<img src='./images/kara-eads-1080482-unsplash.jpg' alt='RANDOM ALT TEXT 9'>"},
+        { bgSource: "<img src='./images/max-di-capua-1064162-unsplash.jpg' alt='RANDOM ALT TEXT 10'>"},
+        { bgSource: "<img src='./images/elin-tabitha-1092029-unsplash.jpg' alt='RANDOM ALT TEXT 11'>"},
+        { bgSource: "<img src='./images/jeremy-bishop-338661-unsplash.jpg' alt='RANDOM ALT TEXT 12'>"}
     ]
 }
 
@@ -111,7 +111,11 @@ app.getRandomBackground = function () {
     console.log("background called");
     if (app.bgLocked === false) {
         app.randomBgSrc = app.data.backgrounds[Math.floor(Math.random() * app.data.backgrounds.length)].bgSource;
-        $(".background-image").css("background-image", `linear-gradient(to top, rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url(${app.randomBgSrc})`);
+
+
+        $(".background-image").html(`${app.randomBgSrc}`);
+        
+        // $(".background-image").css("background-image", `linear-gradient(to top, rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url(${app.randomBgSrc})`);
         console.log(app.randomBgSrc);
     }
 }

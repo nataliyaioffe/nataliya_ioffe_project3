@@ -11,10 +11,17 @@ main {
 
 }
 .background-image {
-    // border: 5px solid blue;
-    background: linear-gradient(to top, rgba(255,255,255,0.3),rgba(255,255,255,0.3)),url("../images/sarah-dorweiler-357715-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
+    height: 100%;
+    width: 100%;
+    border: 5px solid blue;
+    // background: linear-gradient(to top, rgba(255,255,255,0.3),rgba(255,255,255,0.3)),url("../images/sarah-dorweiler-357715-unsplash.jpg");
+    // background-size: cover;
+    // background-position: center;
+    img {
+    object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .wrapper {
