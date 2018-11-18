@@ -149,6 +149,24 @@ img {
 html {
   font-size: 62.7%; }
 
+body {
+  color: #232322; }
+
+main {
+  height: 100vh;
+  position: relative; }
+
+.background-image, .wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; }
+
+.background-image {
+  background: url("../images/sarah-dorweiler-357715-unsplash.jpg");
+  background-size: cover;
+  background-position: top; }
+
 .wrapper {
   width: 80%;
   max-width: 1280px;
@@ -163,20 +181,11 @@ html {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  text-align: center; }
-
-main {
-  background: url("../images/sarah-dorweiler-357715-unsplash.jpg");
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  height: 100vh; }
-
-.wrapper {
-  padding-top: 150px; }
-
-p {
-  margin: 20px 0; }
+  text-align: center;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); }
 
 h1 {
   font-family: 'East Sea Dokdo', cursive;
@@ -186,14 +195,12 @@ h1 {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  position: absolute;
-  top: 0;
-  right: 42%; }
+  animation-timing-function: ease-in-out; }
 
 p {
   font-family: 'Courgette', cursive;
-  font-size: 3rem; }
+  font-size: 5rem;
+  margin: 50px 0; }
 
 .active {
   color: rgba(0, 0, 0, 0.5); }
@@ -252,3 +259,19 @@ button {
   border-radius: 50px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: transparent; }
+
+.fadeInAnimation {
+  -webkit-animation-name: fadeInAnimation;
+  animation-name: fadeInAnimation; }
+
+@-webkit-keyframes fadeInAnimation {
+  0% {
+    opacity: 100%; }
+  100% {
+    opacity: 100; } }
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 100%; }
+  100% {
+    opacity: 100; } }

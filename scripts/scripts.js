@@ -36,7 +36,7 @@ app.init = function() {
     // ON BUTTON CLICK, execute random quote and bg functions, IF not locked... 
     $("button").on("click", function() {
         console.log("click");
-    
+           
         if (app.quoteLocked === false) {
         $(".quote-result").fadeOut(1200, function() {
             app.getRandomQuote();
@@ -44,13 +44,21 @@ app.init = function() {
         })}
 
         
+        // if (app.bgLocked === false) {
+        //     $("main").fadeOut(1200, function() {
+        //         app.getRandomBackground();
+        //     })
+        //     setTimeout(function(){
+        //         $("main").fadeIn(1200);
+        //     }, 900);
+        // }
+
+
         if (app.bgLocked === false) {
-            $("main").fadeOut(1200, function() {
+            $(".background-image").fadeOut(1200, function() {
                 app.getRandomBackground();
+                $(".background-image").fadeIn(1200);
             })
-            setTimeout(function(){
-                $("main").fadeIn(1200);
-            }, 900);
         }
     }); // END ON CLICK function
 } // END INIT FUNCTION  ****************
@@ -71,7 +79,7 @@ app.getRandomBackground = function () {
     if (app.bgLocked === false) {
         // const randomBgSrc = app.data.backgrounds[Math.floor(Math.random() * app.data.backgrounds.length)].bgSource;
         app.randomBgSrc = app.data.backgrounds[Math.floor(Math.random() * app.data.backgrounds.length)].bgSource;
-        $("main").css("background-image", `url(${app.randomBgSrc})`);
+        $(".background-image").css("background-image", `url(${app.randomBgSrc})`);
         console.log(app.randomBgSrc);
     }
 }

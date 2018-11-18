@@ -1,16 +1,41 @@
 main {
+    height: 100vh;
+    position: relative;
+}
+
+.background-image, .wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+}
+.background-image {
+    // border: 5px solid blue;
     background: url("../images/sarah-dorweiler-357715-unsplash.jpg");
     background-size: cover;
     background-position: top;
-    position: relative;
-    height: 100vh;
-}
-.wrapper {
-    padding-top: 150px;
 }
 
-p {
-    margin: 20px 0;
+.wrapper {
+    // border: 1px solid red;
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.headline {
+    // border: 1px solid orange;
+}
+
+.hero-content {
+    // border: 1px solid purple;
 }
 
 h1 {
@@ -19,14 +44,12 @@ h1 {
     animation-duration: 4s;
     animation-iteration-count:infinite;
     animation-timing-function: ease-in-out;
-    position: absolute;
-    top: 0;
-    right: 42%;
 }
 
 p {
     font-family: 'Courgette', cursive;
-    font-size: 3rem;
+    font-size: 5rem;
+    margin: 50px 0;
 }
 
 .active {
@@ -49,7 +72,6 @@ a {
 }
 
 .pulse {
-  -webkit-animation-name: pulse;
   animation-name: pulse;
 }
 
@@ -80,6 +102,25 @@ button {
     border: 1px solid rgba(0, 0, 0, 0.2);
     background-color: transparent;
 }
+
+
+
+
+
+
+.fadeInAnimation {
+  animation-name: fadeInAnimation;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
 
 // BACKGROUNDS
 // .bg0 {
