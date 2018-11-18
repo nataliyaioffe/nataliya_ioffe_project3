@@ -163,17 +163,21 @@ main {
   top: 0; }
 
 .background-image {
-  background: url("../images/sarah-dorweiler-357715-unsplash.jpg");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3))), url("../images/sarah-dorweiler-357715-unsplash.jpg");
+  background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/sarah-dorweiler-357715-unsplash.jpg");
+  background: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/sarah-dorweiler-357715-unsplash.jpg");
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/sarah-dorweiler-357715-unsplash.jpg");
   background-size: cover;
-  background-position: top; }
+  background-position: center; }
 
 .wrapper {
-  width: 80%;
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 30px 30px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -190,8 +194,8 @@ main {
 h1 {
   font-family: 'East Sea Dokdo', cursive;
   font-size: 12rem;
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
+  -webkit-animation-duration: 4.5s;
+  animation-duration: 4.5s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
@@ -199,8 +203,16 @@ h1 {
 
 p {
   font-family: 'Courgette', cursive;
-  font-size: 5rem;
-  margin: 50px 0; }
+  font-size: 4rem;
+  margin: 50px 0;
+  font-family: 'Amiri', serif;
+  line-height: 1.2; }
+
+span {
+  display: block;
+  font-size: 3rem;
+  margin-top: 2rem;
+  font-style: italic; }
 
 .active {
   color: rgba(0, 0, 0, 0.5); }
@@ -213,7 +225,7 @@ p {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding-top: 40px; }
+  padding-top: 20px; }
 
 a {
   color: rgba(0, 0, 0, 0.2);
@@ -258,7 +270,13 @@ button {
   padding: 15px;
   border-radius: 50px;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: transparent; }
+  background-color: transparent;
+  -webkit-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease; }
+  button:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1); }
 
 .fadeInAnimation {
   -webkit-animation-name: fadeInAnimation;

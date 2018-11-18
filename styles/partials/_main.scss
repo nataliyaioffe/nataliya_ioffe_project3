@@ -12,17 +12,18 @@ main {
 }
 .background-image {
     // border: 5px solid blue;
-    background: url("../images/sarah-dorweiler-357715-unsplash.jpg");
+    background: linear-gradient(to top, rgba(255,255,255,0.3),rgba(255,255,255,0.3)),url("../images/sarah-dorweiler-357715-unsplash.jpg");
     background-size: cover;
-    background-position: top;
+    background-position: center;
 }
 
 .wrapper {
     // border: 1px solid red;
-    width: 80%;
+    width: 100%;
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
+    padding: 30px 30px;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -30,26 +31,30 @@ main {
     transform: translateX(-50%);
 }
 
-.headline {
-    // border: 1px solid orange;
-}
-
-.hero-content {
-    // border: 1px solid purple;
-}
-
 h1 {
     font-family: 'East Sea Dokdo', cursive;
     font-size: 12rem; 
-    animation-duration: 4s;
+    animation-duration: 4.5s;
     animation-iteration-count:infinite;
     animation-timing-function: ease-in-out;
 }
 
 p {
     font-family: 'Courgette', cursive;
-    font-size: 5rem;
+    font-size: 4rem;
     margin: 50px 0;
+    font-family: 'Amiri', serif;
+    line-height: 1.2;
+
+
+
+}
+
+span {
+    display:block;
+    font-size: 3rem;
+    margin-top:2rem;
+    font-style: italic;
 }
 
 .active {
@@ -59,7 +64,7 @@ p {
 .lock {
     display: flex;
     flex-direction: column;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 a {
@@ -76,6 +81,7 @@ a {
 }
 
 @keyframes pulse {
+// edited from animate.css
   0% {
     transform: scale3d(1, 1, 1);
   }
@@ -88,8 +94,6 @@ a {
     transform: scale3d(1, 1, 1);
   }
 }
-// edited from animate.css
-
 
 .quote-wrapper {
     text-align: center;
@@ -101,10 +105,12 @@ button {
     border-radius: 50px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     background-color: transparent;
+    transition: 1s ease;
+    &:hover {
+        background: rgba(0,0,0,0.1);
+        border: 1px solid rgba(0,0,0,0.1);;
+    }
 }
-
-
-
 
 
 
