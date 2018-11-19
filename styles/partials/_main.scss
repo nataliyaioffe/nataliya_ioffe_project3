@@ -112,33 +112,35 @@ button, a {
     text-transform: lowercase;
     transition: 1s ease;
     border-radius: 50px;
-    border: 1px solid white;
-    &:hover {
-        background:white;
-        border: 1px solid rgba(0, 0, 0, 0.4);
-
-    }
 }
 
 
 button {
     font-size: 2rem;
-    width: 90px;
-    height: 90px;
-    margin: 0 25px;
-    background: rgba(255,255,255,0.7);
+    width: 100px;
+    height: 100px;
+    margin: 0 25px;  
+    background: white; 
+    border: 2px solid lightgrey;
+    &:hover {
+        border: 2px solid rgba(0, 0, 0, 0.7);
+    }
 }
 
 .lock {
     font-size: 1.6rem;
     width: 80px;
-    height: 80px;   
-    color: rgba(0, 0, 0, 0.3);
-    background: rgba(255,255,255,0.3);
+    height: 80px;  
+    color: grey; 
+    border: 2px solid transparent;
+    background: white;
     &:hover {
-        color: rgba(0, 0, 0, 0.7);
+        font-style: italic;
+        border: 2px solid rgba(0, 0, 0, 0.7);
     }
 }
+
+
 
 .fas {
     font-size: 1.8rem;
@@ -148,8 +150,7 @@ button {
 
 .active {
     color: rgba(0, 0, 0, 0.7);
-    background:white;
-    border:1px solid white;
+    border: 2px solid rgba(0, 0, 0, 0.7);
 }
 
 

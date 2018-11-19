@@ -41,7 +41,6 @@ app.data = {
         "\"It is easy to believe we are each waves and forget we are also the ocean.\"<span class='author'>Jon J. Muth</span>",
         "\"In the midst of chaos, there is also opportunity.\"<span class='author'>Sun Tzu</span>",
         "\"You look at where you’re going and where you are and it never makes sense, but then you look back at where you’ve been and a pattern seems to emerge.\" <span class='author'>Robert M. Pirsig</span>",
-        "\"There is no need for temples; no need for complicated philosophy. Our own brain, our own heart is our temple; the philosophy is kindness.\"<span class='author'>Dalai Lama</span>",
         "\"As a bee gathering nectar does not harm or disturb the color & fragrance of the flower; so do the wise move through the world.\" <span class='author'>Buddha</span>",
         "\"The whole moon and the entire sky are reflected in one dewdrop on the grass.\"<span class='author'> Dogen</span>",
         "\"If your compassion does not include yourself, it is incomplete.\"<span class='author'>Buddha</span>",
@@ -71,7 +70,6 @@ app.data = {
         { bgSource: "<img src='./images/sharon-mccutcheon-576867-unsplash.jpg' alt='Bokeh photography of lights.'>" },
         { bgSource: "<img src='./images/simon-matzinger-392063-unsplash.jpg' alt='Tall and dainty grasses and flowers.'>" },
         { bgSource: "<img src='./images/thomas-kinto-1057481-unsplash.jpg' alt='A blurry green and pink background.'>" },
-        { bgSource: "<img src='./images/tristan-taussac-356484-unsplash.jpg' alt='Snowy mountain peaks at twilight, the moon a fading crescent above. '>" },
         { bgSource: "<img src='./images/vitalis-hirschmann-504920-unsplash.jpg' alt='Dark evergreen forest peaking out from thick fog and clouds.'>" },
         { bgSource: "<img src='./images/bench-accounting-49909-unsplash.jpg' alt='Minimalist, bright office with desk against wall.'>" },
     ]
