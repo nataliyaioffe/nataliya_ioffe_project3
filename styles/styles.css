@@ -220,10 +220,11 @@ main {
   align-items: center;
   text-align: center; }
 
-h1 {
+.logo {
   font-family: 'East Sea Dokdo', cursive;
   font-size: 12rem;
-  color: #232322;
+  font-weight: bold;
+  text-transform: capitalize;
   line-height: 1;
   -webkit-animation-duration: 4.5s;
   animation-duration: 4.5s;
@@ -246,8 +247,10 @@ h1 {
       font-style: italic;
       margin-top: 2rem; }
     .quote-wrapper .quote-text .instruction {
-      font-weight: bold;
-      font-style: italic; }
+      font-family: 'East Sea Dokdo', cursive;
+      font-size: 5.5rem;
+      line-height: 0.75;
+      font-weight: bold; }
 
 .options {
   display: -webkit-box;
@@ -257,7 +260,7 @@ h1 {
   -ms-flex-align: center;
   align-items: center; }
 
-button, a {
+button, .lock {
   font-family: 'Amiri', serif;
   text-align: center;
   text-transform: lowercase;
