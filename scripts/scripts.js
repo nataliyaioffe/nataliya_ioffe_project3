@@ -84,9 +84,9 @@ app.init = function() {
     // If neither quote nor background are locked by user, fade-in/out new quote/background on BUTTON CLICK.
     $("button").on("click", function() {          
         if (app.quoteLocked === false) {
-            $(".quote-result").fadeOut(1200, function() {
+            $(".quote-text").fadeOut(1200, function() {
                 app.getRandomQuote();
-                $(".quote-result").fadeIn(2000);
+                $(".quote-text").fadeIn(2000);
             })
         };
 
@@ -119,10 +119,10 @@ app.init = function() {
 app.quoteLocked = false;
 app.bgLocked = false;
 
-// Retreive random quote text, insert text into quote-result paragraph tag.
+// Retreive random quote text, insert text into quote-text paragraph tag.
 app.getRandomQuote = function () {
     const randomQuote = app.data.quotes[Math.floor(Math.random() * app.data.quotes.length)];
-    $(".quote-result").html(randomQuote);
+    $(".quote-text").html(randomQuote);
 };
 
 // Retreive random background image, insert into background-image div. 
