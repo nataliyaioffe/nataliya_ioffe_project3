@@ -13,7 +13,7 @@ main {
         width: 100%;
         height: 100%;
         object-fit: cover;
-    };
+    }
 }
 
 .overlay {
@@ -36,7 +36,6 @@ main {
     left: 50%;
     transform: translateX(-50%);
 }
-
 .content-container {
     height: 100%;
     padding: 30px 0;
@@ -46,7 +45,6 @@ main {
     align-items: center;
     text-align: center;
 }
-
 h1 {
     font-family: 'East Sea Dokdo', cursive;
     font-size: 12rem; 
@@ -55,7 +53,6 @@ h1 {
     animation-iteration-count:infinite;
     animation-timing-function: ease-in-out;
 }
-
 .quote-wrapper {
     font-family: 'Amiri', serif;
     text-align: center;
@@ -76,22 +73,22 @@ h1 {
         }
     }
 }
-
+// div holding buttons
 .options {
     display: flex;
     align-items: center;;
 }
 
 button, a {
+    font-family: 'East Sea Dokdo', cursive;
     text-align: center;
     text-transform: lowercase;
     transition: 1s ease;
     border-radius: 50px;
 }
-
-
+// "search" button
 button {
-    font-size: 2rem;
+    font-size: 2.8rem;
     width: 100px;
     height: 100px;
     margin: 0 25px;  
@@ -101,9 +98,9 @@ button {
         border: 1px solid rgba(0, 0, 0, 0.7);
     }
 }
-
+// lock "button" links
 .lock {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     width: 80px;
     height: 80px;  
     color: grey; 
@@ -115,20 +112,18 @@ button {
     }
 }
 
-
-
+// icons
 .fas {
     font-size: 1.8rem;
     margin: 13px 0 10px 0;
     display: block;
 }
-
-.active {
+.active-lock {
     color: rgba(0, 0, 0, 0.7);
     border: 1px solid rgba(0, 0, 0, 0.7);
 }
 
-
+// H1 PULSE ANIMATION
 .pulse {
   animation-name: pulse;
 }

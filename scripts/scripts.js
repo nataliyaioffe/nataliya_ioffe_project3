@@ -1,11 +1,68 @@
 // ALL IMAGES COURTESY OF UNSPLASH.COM
 console.log("ALL IMAGES COURTESY OF UNSPLASH.COM");
 
+const app = {};
+
 $(function () {
     app.init();
 });
 
-const app = {};
+app.init = function() {
+    // On page load, fade in page elements.
+    $('main').css('display', 'none');
+    $('main').fadeIn(2000);
+
+    // If neither quote nor background are locked by user, fade-in/out new quote/background on BUTTON CLICK.
+    $("button").on("click", function() {          
+        if (app.quoteLocked === false) {
+            $(".quote-text").fadeOut(1200, function() {
+                app.getRandomQuote();
+                $(".quote-text").fadeIn(2000);
+            })
+        };
+
+        if (app.bgLocked === false) {
+            $(".background-image").fadeOut(1200, function() {
+                app.getRandomBackground();
+                setTimeout( function() {
+                    $(".background-image").fadeIn(2000);
+                }, 500);
+            })
+        };
+    });
+
+    // On the click of quote and/or image "lock" links, set their "locked" variables to opposite boolean.
+    $(".quote-lock-link").on("click", function () {
+        $(this).toggleClass("active-lock");
+        app.quoteLocked = !app.quoteLocked;
+        return app.bgLocked;
+    });
+
+    $(".bg-lock-link").on("click", function () {
+        $(this).toggleClass("active-lock");
+        app.bgLocked = !app.bgLocked;
+        return app.bgLocked;
+    });
+};
+// END APP.INIT *****
+
+// By default, neither quote nor background are locked.
+app.quoteLocked = false;
+app.bgLocked = false;
+
+// Retreive random quote text, insert text into quote-text paragraph tag.
+app.getRandomQuote = function () {
+    const randomQuote = app.data.quotes[Math.floor(Math.random() * app.data.quotes.length)];
+    $(".quote-text").html(randomQuote);
+};
+
+// Retreive random background image, insert into background-image div. 
+app.getRandomBackground = function () {
+    if (app.bgLocked === false) {
+        app.randomBgSrc = app.data.backgrounds[Math.floor(Math.random() * app.data.backgrounds.length)].bgSource;
+        $(".background-image").html(`${app.randomBgSrc}`);
+    };
+};
 
 app.data = {
     quotes: [
@@ -37,7 +94,7 @@ app.data = {
         "\"Act without expectation.\"<span class='author'>Lao Tzu</span>",
         "\"Roads were made for journeys not destinations.\"<span class='author'>Confucius</span>",
         "\"Sleep is the best meditation.\"<span class='author'>Dalai Lama</span>",
-        "\"The personal life deeply lived always expands into truths beyond itself.\"<span class='author'>Anais Nin</span>",,
+        "\"The personal life deeply lived always expands into truths beyond itself.\"<span class='author'>Anais Nin</span>", ,
         "\"It is easy to believe we are each waves and forget we are also the ocean.\"<span class='author'>Jon J. Muth</span>",
         "\"In the midst of chaos, there is also opportunity.\"<span class='author'>Sun Tzu</span>",
         "\"You look at where you’re going and where you are and it never makes sense, but then you look back at where you’ve been and a pattern seems to emerge.\" <span class='author'>Robert M. Pirsig</span>",
@@ -48,7 +105,7 @@ app.data = {
         "\"If you think you are too small to make a difference, try sleeping with a mosquito.\"<span class='author'>Dalai Lama</span>",
         "\"A man is great not because he hasn’t failed; a man is great because failure hasn’t stopped him.\" <span class='author'>Confucius</span>",
         "\"Unhappiness and rain just drift by and are gone, they are visitors.\" <span class='author'>John Aske</span>",
-        "\"When you catch yourself slipping into a pool of negativity, notice how it derives from nothing other than resistance to the current situation.\" <span class='author'>Donna Quesada</span>"   
+        "\"When you catch yourself slipping into a pool of negativity, notice how it derives from nothing other than resistance to the current situation.\" <span class='author'>Donna Quesada</span>"
     ],
     backgrounds: [
         // ALL IMAGES COURTESY OF UNSPLASH.COM
@@ -75,63 +132,3 @@ app.data = {
     ]
 }
 // END APP.DATA ****
-
-app.init = function() {
-    // On page load, fade in page elements.
-    $('main').css('display', 'none');
-    $('main').fadeIn(2000);
-
-    // If neither quote nor background are locked by user, fade-in/out new quote/background on BUTTON CLICK.
-    $("button").on("click", function() {          
-        if (app.quoteLocked === false) {
-            $(".quote-text").fadeOut(1200, function() {
-                app.getRandomQuote();
-                $(".quote-text").fadeIn(2000);
-            })
-        };
-
-        if (app.bgLocked === false) {
-            $(".background-image").fadeOut(1200, function() {
-                app.getRandomBackground();
-                setTimeout( function() {
-                    $(".background-image").fadeIn(2000);
-                }, 500);
-            })
-        };
-    });
-
-    // On the click of quote and/or image "lock" links, set their "locked" variables to opposite boolean.
-    $(".quote-lock-link").on("click", function () {
-        $(this).toggleClass("active");
-        app.quoteLocked = !app.quoteLocked;
-        return app.bgLocked;
-    });
-
-    $(".bg-lock-link").on("click", function () {
-        $(this).toggleClass("active");
-        app.bgLocked = !app.bgLocked;
-        return app.bgLocked;
-    });
-};
-// END APP.INIT *****
-
-// By default, neither quote nor background are locked.
-app.quoteLocked = false;
-app.bgLocked = false;
-
-// Retreive random quote text, insert text into quote-text paragraph tag.
-app.getRandomQuote = function () {
-    const randomQuote = app.data.quotes[Math.floor(Math.random() * app.data.quotes.length)];
-    $(".quote-text").html(randomQuote);
-};
-
-// Retreive random background image, insert into background-image div. 
-app.getRandomBackground = function () {
-    if (app.bgLocked === false) {
-        app.randomBgSrc = app.data.backgrounds[Math.floor(Math.random() * app.data.backgrounds.length)].bgSource;
-        $(".background-image").html(`${app.randomBgSrc}`);
-    };
-};
-
-
-

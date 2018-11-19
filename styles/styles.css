@@ -257,6 +257,7 @@ h1 {
   align-items: center; }
 
 button, a {
+  font-family: 'East Sea Dokdo', cursive;
   text-align: center;
   text-transform: lowercase;
   -webkit-transition: 1s ease;
@@ -265,7 +266,7 @@ button, a {
   border-radius: 50px; }
 
 button {
-  font-size: 2rem;
+  font-size: 2.8rem;
   width: 100px;
   height: 100px;
   margin: 0 25px;
@@ -275,7 +276,7 @@ button {
     border: 1px solid rgba(0, 0, 0, 0.7); }
 
 .lock {
-  font-size: 1.6rem;
+  font-size: 2.2rem;
   width: 80px;
   height: 80px;
   color: grey;
@@ -290,7 +291,7 @@ button {
   margin: 13px 0 10px 0;
   display: block; }
 
-.active {
+.active-lock {
   color: rgba(0, 0, 0, 0.7);
   border: 1px solid rgba(0, 0, 0, 0.7); }
 
@@ -335,4 +336,11 @@ button {
   .quote-wrapper {
     padding: 0 25px; }
     .quote-wrapper .quote-text {
-      font-size: 3.2rem; } }
+      font-size: 2.8rem; } }
+
+@media (max-width: 320px) {
+  button {
+    font-size: 2.4rem;
+    margin: 0 10px; }
+  .lock {
+    font-size: 2rem; } }
