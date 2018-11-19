@@ -162,7 +162,7 @@ img {
 html {
   font-size: 62.7%; }
 
-body {
+body, a {
   color: #232322; }
 
 main {
@@ -223,6 +223,7 @@ main {
 h1 {
   font-family: 'East Sea Dokdo', cursive;
   font-size: 12rem;
+  color: #232322;
   line-height: 1;
   -webkit-animation-duration: 4.5s;
   animation-duration: 4.5s;
@@ -257,7 +258,7 @@ h1 {
   align-items: center; }
 
 button, a {
-  font-family: 'East Sea Dokdo', cursive;
+  font-family: 'Amiri', serif;
   text-align: center;
   text-transform: lowercase;
   -webkit-transition: 1s ease;
@@ -266,7 +267,7 @@ button, a {
   border-radius: 50px; }
 
 button {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   width: 100px;
   height: 100px;
   margin: 0 25px;
@@ -276,19 +277,18 @@ button {
     border: 1px solid rgba(0, 0, 0, 0.7); }
 
 .lock {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   width: 80px;
   height: 80px;
   color: grey;
   border: 1px solid transparent;
   background: white; }
   .lock:hover {
-    font-style: italic;
     border: 1px solid rgba(0, 0, 0, 0.7); }
 
 .fas {
-  font-size: 1.8rem;
-  margin: 13px 0 10px 0;
+  font-size: 2rem;
+  margin-top: 15px;
   display: block; }
 
 .active-lock {

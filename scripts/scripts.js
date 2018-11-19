@@ -1,4 +1,3 @@
-// ALL IMAGES COURTESY OF UNSPLASH.COM
 console.log("ALL IMAGES COURTESY OF UNSPLASH.COM");
 
 const app = {};
@@ -35,12 +34,26 @@ app.init = function() {
     $(".quote-lock-link").on("click", function () {
         $(this).toggleClass("active-lock");
         app.quoteLocked = !app.quoteLocked;
-        return app.bgLocked;
+        if (app.quoteLocked === true) {
+            $(this).find(".fas").removeClass();
+            $(this).find("i").addClass("fas fa-lock");
+        } else {
+            $(this).find(".fas").removeClass();
+            $(this).find("i").addClass("fas fa-lock-open");
+        }
+        return app.quoteLocked;
     });
 
     $(".bg-lock-link").on("click", function () {
         $(this).toggleClass("active-lock");
         app.bgLocked = !app.bgLocked;
+        if (app.bgLocked === true) {
+            $(this).find("i").removeClass();
+            $(this).find("i").addClass("fas fa-lock");
+        } else {
+            $(this).find("i").removeClass();
+            $(this).find("i").addClass("fas fa-lock-open");
+        }
         return app.bgLocked;
     });
 };
