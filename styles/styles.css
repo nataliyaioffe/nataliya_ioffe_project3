@@ -137,6 +137,19 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   margin: 0;
   padding: 0; }
 
+.visuallyhidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0);
+  overflow: hidden; }
+
 a {
   text-decoration: none; }
 
@@ -169,41 +182,48 @@ main {
     height: 100%; }
 
 .overlay {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 500;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.5); }
+  background: rgba(255, 255, 255, 0.2); }
 
 .wrapper {
+  width: 90vw;
+  max-width: 1280px;
+  height: 100%;
   position: absolute;
   z-index: 999;
   top: 0;
-  width: 100vw;
-  max-width: 1280px;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 30px 30px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%); }
 
+.content-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px 0; }
+
 h1 {
   font-family: 'East Sea Dokdo', cursive;
   font-size: 12rem;
+  line-height: 1;
   -webkit-animation-duration: 4.5s;
   animation-duration: 4.5s;
   -webkit-animation-iteration-count: infinite;
@@ -212,53 +232,84 @@ h1 {
   animation-timing-function: ease-in-out; }
 
 .quote-wrapper {
+  font-family: 'Amiri', serif;
   text-align: center;
-  height: 40vh; }
+  padding: 0 100px;
+  margin: 25px 0; }
   .quote-wrapper .quote-result {
-    font-family: 'Courgette', cursive;
-    font-size: 3rem;
-    margin: 50px 0;
-    font-family: 'Amiri', serif;
-    line-height: 1.2; }
-    .quote-wrapper .quote-result span {
+    font-size: 4rem;
+    line-height: 1.4; }
+    .quote-wrapper .quote-result .author {
       display: block;
       margin-top: 2rem;
-      font-size: 3rem;
+      font-size: 2.4rem;
+      font-style: italic; }
+    .quote-wrapper .quote-result .instruction {
+      font-weight: bolder;
       font-style: italic; }
 
-button {
-  width: 60px;
-  height: 60px;
-  border-radius: 50px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: transparent;
-  -webkit-transition: 1s ease;
-  -o-transition: 1s ease;
-  transition: 1s ease; }
-  button:hover {
-    background: rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.1); }
+@media (max-width: 768px) {
+  .quote-wrapper {
+    padding: 0 50px; } }
 
-.lock {
+@media (max-width: 500px) {
+  .quote-wrapper .quote-result {
+    font-size: 3.6rem;
+    line-height: 1.2; }
+    .quote-wrapper .quote-result .author {
+      font-size: 2rem; } }
+
+@media (max-width: 390px) {
+  .quote-wrapper {
+    padding: 0 25px; }
+    .quote-wrapper .quote-result {
+      font-size: 3.2rem; } }
+
+.options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding-top: 20px; }
-  .lock a {
-    color: rgba(0, 0, 0, 0.2);
-    -webkit-transition: .25s linear;
-    -o-transition: .25s linear;
-    transition: .25s linear;
-    margin: 5px; }
-    .lock a:hover {
-      color: rgba(0, 0, 0, 0.5); }
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+button, a {
+  text-align: center;
+  text-transform: lowercase;
+  -webkit-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
+  border-radius: 50px;
+  border: 1px solid white; }
+  button:hover, a:hover {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.4); }
+
+button {
+  font-size: 2rem;
+  width: 90px;
+  height: 90px;
+  margin: 0 25px;
+  background: rgba(255, 255, 255, 0.7); }
+
+.lock {
+  font-size: 1.6rem;
+  width: 80px;
+  height: 80px;
+  color: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.3); }
+  .lock:hover {
+    color: rgba(0, 0, 0, 0.7); }
+
+.fas {
+  font-size: 1.8rem;
+  margin: 13px 0 10px 0;
+  display: block; }
 
 .active {
-  color: rgba(0, 0, 0, 0.5); }
+  color: rgba(0, 0, 0, 0.7);
+  background: white;
+  border: 1px solid white; }
 
 .pulse {
   -webkit-animation-name: pulse;
